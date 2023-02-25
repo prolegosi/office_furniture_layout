@@ -1,11 +1,11 @@
 @import 'res_css.css';
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Prata&family=Roboto:wght@400;500;700&display=swap");
-.item__button, .item__content, .banner__button, .banner__text, .menu__href, .logo-box__bootn, .logo-box__phone, .top-nav__href {
+.bottom__text, .f-top__button, .f-top__phone-wrapper__phone, .f-top__text, .tile__button, .tile__input, .tile__content, .item__button, .item__content, .banner__button, .banner__text, .menu__href, .logo-box__bootn, .logo-box__phone, .top-nav__href {
   font-family: "Roboto";
   font-weight: 400;
 }
 
-.catalog__header, .banner__header, .logo-box__img-text {
+.tile__header, .catalog__header, .banner__header, .logo-box__img-text {
   font-family: "Roboto";
   font-weight: 700;
 }
@@ -187,14 +187,30 @@ body {
   margin: 0 auto;
   margin-top: 87px;
 }
+.main__tile {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 95px;
+}
+
 .catalog {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 .catalog__header {
+  position: relative;
   font-size: 24px;
   color: #000000;
+}
+.catalog__header::before {
+  content: "";
+  position: absolute;
+  width: 188px;
+  height: 60px;
+  background-image: url("../img/x368.png");
+  left: 80%;
 }
 .catalog__wrapper {
   display: flex;
@@ -239,4 +255,153 @@ body {
   font-size: 14px;
   color: #ffffff;
   text-align: center;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #66C05D;
+  padding-bottom: 35px;
+  padding-right: 23%;
+  margin: 5px auto;
+}
+.tile__header {
+  margin-top: 35px;
+  margin-left: 40px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.tile__content {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.tile__form {
+  position: relative;
+  margin-left: 40px;
+  margin-top: 30px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 7px 0;
+  max-width: 230px;
+  z-index: 1;
+}
+.tile__form::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background-image: url("../img/envelope.png");
+  bottom: 10%;
+  left: 135%;
+  z-index: 10;
+}
+.tile__input {
+  font-size: 14px;
+  color: #EFEFEF;
+  text-align: center;
+}
+.tile__href-wrapper {
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  max-width: 170px;
+  text-align: center;
+  padding: 7px 0;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.tile__button {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer {
+  margin: 0 auto;
+}
+.footer__top {
+  margin-top: 125px;
+  padding: 35px 0;
+}
+.f-top {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.f-top__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1110px;
+  width: 100%;
+}
+.f-top__social-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.f-top__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #66C05D;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 19px;
+}
+.f-top__img {
+  position: relative;
+}
+.f-top__text-wrapper-1 {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+.f-top__text-wrapper-2 {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.f-top__text {
+  color: #000000;
+  font-size: 14px;
+}
+.f-top__phone-wrapper {
+  margin-right: 40px;
+  letter-spacing: 0.5px;
+}
+.f-top__phone-wrapper__phone {
+  color: #000000;
+  font-size: 16px;
+}
+.f-top__button-wrapper {
+  border: 2px solid #66C05D;
+  border-radius: 25px;
+  text-align: center;
+  padding: 8px 25px;
+}
+.f-top__button {
+  color: #000000;
+  font-size: 14px;
+}
+
+.bottom__text {
+  font-size: 12px;
+  color: #333333;
+}
+
+.bootom__text-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1110px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 30px 0;
 }/*# sourceMappingURL=style.css.map */

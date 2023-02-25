@@ -229,6 +229,11 @@ body{
     }
 
     &__tile {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 95px;
+        
     }
 }
 .catalog {
@@ -236,10 +241,18 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     &__header {
+        position: relative;
         @extend%robot_b;
-        font-size: 24px;
-       
+        font-size: 24px;       
         color: $black;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 188px;
+            height: 60px;
+            background-image: url("../img/x368.png");
+            left: 80%;
+        }
     }
 
     &__wrapper {
@@ -299,23 +312,183 @@ body{
     }
 }
 .tile {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $grin;
+    padding-bottom: 35px;
+    padding-right: 23%;
+    margin: 5px auto;
     &__header {
+        margin-top: 35px;
+        margin-left: 40px;
+        @extend%robot_b;
+        font-size: 18px;
+        color: $white;
     }
 
     &__content {
+        margin-top: 20px;
+        margin-left: 40px;
+        @extend%robot_r;
+        font-size: 14px;
+        color: $white;        
     }
 
     &__form {
+        position: relative;
+        margin-left: 40px;
+        margin-top: 30px;        
+        background-color: $white;
+        border-radius: 25px;
+        padding: 7px 0;
+        max-width: 230px;
+        z-index: 1;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background-image: url("../img/envelope.png");            
+            bottom: 10%;
+            left: 135%;
+            z-index: 10;
+        }
     }
 
     &__input {
+        @extend%robot_r;
+        font-size: 14px;
+        color: $gray;
+        text-align: center;
     }
 
     &__href-wrapper {
+        border: 2px solid $white;
+        border-radius: 25px;
+        max-width: 170px;
+        text-align: center;
+        padding: 7px 0;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+    &__button {        
+        @extend%robot_r;
+        font-size: 14px;
+        color: $white;
+    }
+}
+.footer {    
+    margin: 0 auto;
+    &__top {
+       
+        margin-top: 125px;
+        padding: 35px 0;
+    }
+
+    &__bottom {        
+        
+    }
+}
+.f-top {
+    background-color: $white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1110px;
+        width: 100%;        
+    }    
+    &__social-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $grin;
+        width: 45px;
+        height: 45px;        
+        border-radius: 50%;
+        margin-right: 19px;
+    }
+
+    &__img {
+        position: relative;                
+        
+    }
+
+    &__text-wrapper-1 {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0 auto;
+    }
+    &__text-wrapper-2{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+    &__text {
+        @extend%robot_r;
+        color: $black;
+        font-size: 14px;
+    }
+
+    &__phone-wrapper {
+       margin-right: 40px;
+       letter-spacing: 0.5px;
+
+    &__phone {
+        @extend%robot_r;
+        color: $black;
+        font-size: 16px;
+        
+    }
+    }
+
+    &__button-wrapper {
+        border: 2px solid $grin;
+        border-radius: 25px;
+        text-align: center;
+        padding: 8px 25px;
+        
     }
 
     &__button {
+        @extend%robot_r;
+        color: $black;
+        font-size: 14px;
+        
+    }
+}
+.bottom {
+    
+    &__text {
+        @extend%robot_r;
+        font-size: 12px;
+        color: $dark;
+    }
+}
+.bootom {
+
+    &__text-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1110px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 30px 0;
     }
 }
 
