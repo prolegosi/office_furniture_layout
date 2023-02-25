@@ -1,13 +1,18 @@
 @import 'res_css.css';
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Prata&family=Roboto:wght@400;500;700&display=swap");
-.banner__button, .banner__text, .menu__href, .logo-box__bootn, .logo-box__phone, .top-nav__href {
+.item__button, .item__content, .banner__button, .banner__text, .menu__href, .logo-box__bootn, .logo-box__phone, .top-nav__href {
   font-family: "Roboto";
   font-weight: 400;
 }
 
-.banner__header, .logo-box__img-text {
+.catalog__header, .banner__header, .logo-box__img-text {
   font-family: "Roboto";
   font-weight: 700;
+}
+
+.item__price {
+  font-family: "Roboto";
+  font-weight: 500;
 }
 
 body {
@@ -116,26 +121,36 @@ body {
 }
 .banner__text-box {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 400px;
   max-width: 350px;
+  padding-bottom: 50px;
 }
 .banner__header {
   font-size: 48px;
   color: #ffffff;
-  margin-bottom: px;
+  margin-bottom: 20px;
+  line-height: 2;
 }
 .banner__text {
   font-size: 14px;
   color: #ffffff;
+  max-width: 350px;
+  line-height: 1.5;
 }
 .banner__button {
   font-size: 14px;
   color: #ffffff;
   border: 2px solid #ffffff;
   border-radius: 25px;
-  padding: 7px 35px;
+  padding: 9px 45px;
+  margin-top: 25px;
 }
 .banner__img-box {
   position: relative;
+  display: flex;
+  margin-top: -20px;
 }
 .banner__img-box::before {
   content: "";
@@ -165,4 +180,63 @@ body {
   position: relative;
   margin-top: 30px;
   z-index: 2;
+}
+
+.main {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-top: 87px;
+}
+.catalog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.catalog__header {
+  font-size: 24px;
+  color: #000000;
+}
+.catalog__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 400px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 255px;
+  background-color: #ffffff;
+  padding-bottom: 20px;
+  margin: 5px auto;
+}
+.item__img {
+  margin-top: 25px;
+}
+.item__content {
+  font-size: 14px;
+  color: #333333;
+  text-align: center;
+  max-width: 200px;
+  margin-top: 22px;
+}
+.item__price {
+  font-size: 21px;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+.item__href-wrappwer {
+  margin-top: 15px;
+  background-color: #66C05D;
+  border-radius: 25px;
+  padding: 9px 40px;
+}
+.item__button {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
